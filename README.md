@@ -38,22 +38,22 @@ For simplicity, JAX has removed its internal frames from the traceback of the fo
 At:
   /path/to/project/pybind-jax-concurrency-repro/my_module.py(13): __call__
   /path/to/project/pybind-jax-concurrency-repro/my_module.py(20): inference
-  /path/to/venv/pybind-jax-concurrency-repro/lib/python3.12/site-packages/flax/nnx/transforms/compilation.py(129): __call__
-  /path/to/venv/pybind-jax-concurrency-repro/lib/python3.12/site-packages/jax/_src/linear_util.py(388): _get_result_paths_thunk
-  /path/to/venv/pybind-jax-concurrency-repro/lib/python3.12/site-packages/jax/_src/api_util.py(73): flatten_fun
-  /path/to/venv/pybind-jax-concurrency-repro/lib/python3.12/site-packages/jax/_src/api_util.py(284): _argnums_partial
-  /path/to/venv/pybind-jax-concurrency-repro/lib/python3.12/site-packages/jax/_src/linear_util.py(210): call_wrapped
-  /path/to/venv/pybind-jax-concurrency-repro/lib/python3.12/site-packages/jax/_src/interpreters/partial_eval.py(2181): trace_to_jaxpr_dynamic
-  /path/to/venv/pybind-jax-concurrency-repro/lib/python3.12/site-packages/jax/_src/profiler.py(334): wrapper
-  /path/to/venv/pybind-jax-concurrency-repro/lib/python3.12/site-packages/jax/_src/pjit.py(1289): _create_pjit_jaxpr
-  /path/to/venv/pybind-jax-concurrency-repro/lib/python3.12/site-packages/jax/_src/linear_util.py(460): memoized_fun
-  /path/to/venv/pybind-jax-concurrency-repro/lib/python3.12/site-packages/jax/_src/pjit.py(618): _infer_params_impl
-  /path/to/venv/pybind-jax-concurrency-repro/lib/python3.12/site-packages/jax/_src/pjit.py(718): _infer_params_internal
-  /path/to/venv/pybind-jax-concurrency-repro/lib/python3.12/site-packages/jax/_src/pjit.py(695): _infer_params
-  /path/to/venv/pybind-jax-concurrency-repro/lib/python3.12/site-packages/jax/_src/pjit.py(179): _python_pjit_helper
-  /path/to/venv/pybind-jax-concurrency-repro/lib/python3.12/site-packages/jax/_src/pjit.py(339): cache_miss
-  /path/to/venv/pybind-jax-concurrency-repro/lib/python3.12/site-packages/jax/_src/traceback_util.py(228): reraise_with_filtered_traceback
-  /path/to/venv/pybind-jax-concurrency-repro/lib/python3.12/site-packages/flax/nnx/transforms/compilation.py(350): jit_wrapper
+  /path/to/venv/repro/lib/python3.12/site-packages/flax/nnx/transforms/compilation.py(129): __call__
+  /path/to/venv/repro/lib/python3.12/site-packages/jax/_src/linear_util.py(388): _get_result_paths_thunk
+  /path/to/venv/repro/lib/python3.12/site-packages/jax/_src/api_util.py(73): flatten_fun
+  /path/to/venv/repro/lib/python3.12/site-packages/jax/_src/api_util.py(284): _argnums_partial
+  /path/to/venv/repro/lib/python3.12/site-packages/jax/_src/linear_util.py(210): call_wrapped
+  /path/to/venv/repro/lib/python3.12/site-packages/jax/_src/interpreters/partial_eval.py(2181): trace_to_jaxpr_dynamic
+  /path/to/venv/repro/lib/python3.12/site-packages/jax/_src/profiler.py(334): wrapper
+  /path/to/venv/repro/lib/python3.12/site-packages/jax/_src/pjit.py(1289): _create_pjit_jaxpr
+  /path/to/venv/repro/lib/python3.12/site-packages/jax/_src/linear_util.py(460): memoized_fun
+  /path/to/venv/repro/lib/python3.12/site-packages/jax/_src/pjit.py(618): _infer_params_impl
+  /path/to/venv/repro/lib/python3.12/site-packages/jax/_src/pjit.py(718): _infer_params_internal
+  /path/to/venv/repro/lib/python3.12/site-packages/jax/_src/pjit.py(695): _infer_params
+  /path/to/venv/repro/lib/python3.12/site-packages/jax/_src/pjit.py(179): _python_pjit_helper
+  /path/to/venv/repro/lib/python3.12/site-packages/jax/_src/pjit.py(339): cache_miss
+  /path/to/venv/repro/lib/python3.12/site-packages/jax/_src/traceback_util.py(228): reraise_with_filtered_traceback
+  /path/to/venv/repro/lib/python3.12/site-packages/flax/nnx/transforms/compilation.py(350): jit_wrapper
 
 Aborted (core dumped)
 ```
