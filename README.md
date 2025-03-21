@@ -18,7 +18,7 @@ cd pybind-jax-concurrency-repro
 mkdir build
 cmake -B build
 cmake --build build/
-pip install -r /path/to/requirements.txt
+pip install -r requirements.txt
 ./build/pybind_jax_repro
 ```
 
